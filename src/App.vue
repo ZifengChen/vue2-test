@@ -9,17 +9,15 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div>Deploy Success</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   },
   data() {
     return {
@@ -27,20 +25,20 @@ export default {
     }
   },
   methods: {
-    async treeList() {
-      return fetch('http://localhost:3300/treeInfo').then(res => res.json()).then(res => {
-        this.treeData = res.data
-      })
-    },
-    onSelect(name) {
-      console.log(name)
-    }
+    // async treeList() {
+    //   return fetch('http://localhost:3300/treeInfo').then(res => res.json()).then(res => {
+    //     this.treeData = res.data
+    //   })
+    // },
+    // onSelect(name) {
+    //   console.log(name)
+    // }
   },
   mounted() {
-    this.treeList().then(() => {
-      console.log(this.treeData)
-      this.onSelect('123')
-    })
+    // this.treeList().then(() => {
+    //   console.log(this.treeData)
+    //   this.onSelect('123')
+    // })
   }
 }
 </script>
